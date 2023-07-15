@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { BiErrorCircle } from "react-icons/Bi";
 import "./Contact.css";
 
 const Contact = () => {
@@ -106,6 +107,7 @@ const Contact = () => {
             />
             {validationMessages.user_name && (
               <span className="validation-message">
+                <BiErrorCircle fontSize="1rem" />
                 {validationMessages.user_name}
               </span>
             )}
