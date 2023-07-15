@@ -1,0 +1,57 @@
+.resume-container {
+  margin: 60px 100px;
+  background: var(--color-dark-violet);
+  padding: 4rem;
+  border: 1rem solid var(--color-dark-gray);
+}
+
+.title {
+  color: var(--color-dark-gray);
+}
+
+.resume-list-container {
+  display: grid;
+  place-items: center;
+}
+
+.resume-download-container {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.resume-download-link {
+  display: flex;
+  text-decoration: none;
+  color: var(--color-dark-violet);
+  cursor: pointer;
+  font-family: var(--font-2p);
+  /* font-weight: 900; */
+  font-size: 1rem;
+  text-transform: lowercase;
+  padding: 10px 10px;
+  background: #fff;
+  border: 3px solid #fff;
+  box-shadow:
+    0px 0px 0px 1px var(--color-light-violet),
+    inset 0px 0px 0px 1px var(--color-light-violet),
+    0px 2px 0px 2px var(--color-light-violet);
+  text-shadow:
+    0px -1px var(--color-light-violet),
+    -1px 2px var(--color-light-violet);
+  border-radius: 0.3em;
+}
+
+.resume-download-link:hover {
+  color: var(--color-dark-violet);
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.1" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #fff;
+  border: 3px solid var(--color-dark-gray);
+  background-size: 8px, 100%;
+  text-shadow:
+    0px -1px var(--color-light-violet),
+    -1px 2px var(--color-light-violet);
+  box-shadow:
+    0px 0px 0px 1px var(--color-dark-violet),
+    inset 0px 0px 0px 1px #fff,
+    0px 2px 0px 2px #fff;
+}

@@ -1,0 +1,17 @@
+.footer-container {
+  border-top: 1rem dashed var(--color-dark-violet);
+  padding: 30px 100px;
+}
+
+.footer-sub-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-dark-gray);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.footer-text-violet {
+  color: var(--color-dark-violet);
+}
