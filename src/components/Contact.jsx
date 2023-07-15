@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { BiErrorCircle } from "react-icons/Bi";
+import { BiErrorCircle } from "react-icons/bi";
 import "./Contact.css";
 
 const Contact = () => {
