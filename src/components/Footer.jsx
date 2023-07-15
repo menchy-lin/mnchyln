@@ -1,5 +1,5 @@
 import "./Footer.css";
-import { TbNoCopyright } from "react-icons/Tb";
+import { TbNoCopyright } from "react-icons/tb";
 
 const Footer = () => {
   return (
