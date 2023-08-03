@@ -1,32 +1,26 @@
-.top-to-btm {
-  position: relative;
-}
-
-.icon-position {
+.btn-style {
   position: fixed;
-  bottom: 35px;
-  right: 45px;
-  z-index: 20;
-}
-
-.icon-style {
-  font-family: var(--font-redhat);
-  background: var(--color-dark-gray);
-  border: 3px solid var(--color-dark-violet);
-  height: 50px;
-  width: 150px;
-  letter-spacing: -0.5px;
-  color: #fff;
+  bottom: 30px;
+  right: 28px;
+  width: 5%;
   cursor: pointer;
   animation: movebtn 5s ease-in-out infinite;
   transition: all 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  content: url("../assets/img/arrow-up-violet.png");
 }
 
-.icon-style:hover {
+.btn-style.show {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn-style:hover {
+  content: url("../assets/img/arrow-up-green.png");
   animation: none;
-  background: var(--color-dark-violet);
-  color: #fff;
-  border: 3px solid var(--color-dark-gray);
+  color: var(--color-light-green);
 }
 
 @keyframes movebtn {
@@ -46,3 +40,18 @@
     transform: translateY(0px);
   }
 }
+
+/* @media screen and (min-width: 1600px) {
+  .btn-style {
+    border: 0.65rem solid var(--color-dark-violet);
+  }
+  .btn-style:hover {
+    border: 0.65rem solid var(--color-dark-gray);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn-style {
+    letter-spacing: -0.2px;
+  }
+} */

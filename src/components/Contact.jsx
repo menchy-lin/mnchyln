@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { BiErrorCircle } from "react-icons/bi";
 import "./Contact.css";
+import AOSAnimation from "./AOSAnimation";
 
 const Contact = () => {
   const [activeInputs, setActiveInputs] = useState({});
@@ -85,117 +86,121 @@ const Contact = () => {
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
-        <div className="contact-sub-container">
-          <div className="contact-notify-text">
-            <h3>Notify Me</h3>
+        <AOSAnimation animation="fade-right" duration={2000} delay={100}>
+          <div className="contact-sub-container">
+            <div className="contact-notify-text">
+              <h3>Notify Me</h3>
+            </div>
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="contact-form"
+              noValidate
+            >
+              <input
+                className={getInputClassName("user_name")}
+                type="text"
+                placeholder="Full Name"
+                name="user_name"
+                required
+                onFocus={() => handleInputFocus("user_name")}
+                onBlur={() => handleInputBlur("user_name")}
+                noValidate
+              />
+              {validationMessages.user_name && (
+                <span className="validation-message">
+                  <BiErrorCircle className="contact-error-icon" />
+                  {validationMessages.user_name}
+                </span>
+              )}
+
+              <input
+                className={getInputClassName("user_email")}
+                type="email"
+                placeholder="Email"
+                name="user_email"
+                required
+                onFocus={() => handleInputFocus("user_email")}
+                onBlur={() => handleInputBlur("user_email")}
+                noValidate
+              />
+              {validationMessages.user_email && (
+                <span className="validation-message">
+                  <BiErrorCircle className="contact-error-icon" />
+                  {validationMessages.user_email}
+                </span>
+              )}
+
+              <input
+                className={getInputClassName("subject")}
+                type="text"
+                placeholder="Subject"
+                name="subject"
+                required
+                onFocus={() => handleInputFocus("subject")}
+                onBlur={() => handleInputBlur("subject")}
+                noValidate
+              />
+              {validationMessages.subject && (
+                <span className="validation-message">
+                  <BiErrorCircle className="contact-error-icon" />
+                  {validationMessages.subject}
+                </span>
+              )}
+
+              <textarea
+                className={getInputClassName("message")}
+                name="message"
+                cols="30"
+                rows="5"
+                placeholder="message..."
+                onFocus={() => handleInputFocus("message")}
+                onBlur={() => handleInputBlur("message")}
+                noValidate
+              />
+              {validationMessages.message && (
+                <span className="validation-message">
+                  <BiErrorCircle className="contact-error-icon" />
+                  {validationMessages.message}
+                </span>
+              )}
+
+              <button className="contact-btn" type="submit">
+                Send Message
+              </button>
+            </form>
           </div>
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            className="contact-form"
-            noValidate
-          >
-            <input
-              className={getInputClassName("user_name")}
-              type="text"
-              placeholder="Full Name"
-              name="user_name"
-              required
-              onFocus={() => handleInputFocus("user_name")}
-              onBlur={() => handleInputBlur("user_name")}
-              noValidate
-            />
-            {validationMessages.user_name && (
-              <span className="validation-message">
-                <BiErrorCircle fontSize="1rem" />
-                {validationMessages.user_name}
-              </span>
-            )}
-
-            <input
-              className={getInputClassName("user_email")}
-              type="email"
-              placeholder="Email"
-              name="user_email"
-              required
-              onFocus={() => handleInputFocus("user_email")}
-              onBlur={() => handleInputBlur("user_email")}
-              noValidate
-            />
-            {validationMessages.user_email && (
-              <span className="validation-message">
-                <BiErrorCircle fontSize="1rem" />
-                {validationMessages.user_email}
-              </span>
-            )}
-
-            <input
-              className={getInputClassName("subject")}
-              type="text"
-              placeholder="Subject"
-              name="subject"
-              required
-              onFocus={() => handleInputFocus("subject")}
-              onBlur={() => handleInputBlur("subject")}
-              noValidate
-            />
-            {validationMessages.subject && (
-              <span className="validation-message">
-                <BiErrorCircle fontSize="1rem" />
-                {validationMessages.subject}
-              </span>
-            )}
-
-            <textarea
-              className={getInputClassName("message")}
-              name="message"
-              cols="30"
-              rows="5"
-              placeholder="message..."
-              onFocus={() => handleInputFocus("message")}
-              onBlur={() => handleInputBlur("message")}
-              noValidate
-            />
-            {validationMessages.message && (
-              <span className="validation-message">
-                <BiErrorCircle fontSize="1rem" />
-                {validationMessages.message}
-              </span>
-            )}
-
-            <button className="contact-btn" type="submit">
-              Send Message
-            </button>
-          </form>
-        </div>
-        <div className="contact-social-icon-container">
-          <div className="contact-social-icon-sub-container">
-            <a
-              href="https://www.linkedin.com/in/mgcm-ph/"
-              target="_blank"
-              rel="noreferrer"
-              className="contact-social-icon"
-            >
-              linkedin
-            </a>
-            <a
-              href="https://www.facebook.com/menchylin"
-              target="_blank"
-              rel="noreferrer"
-              className="contact-social-icon"
-            >
-              facebook
-            </a>
-            <a
-              href="https://github.com/menchy-lin"
-              target="_blank"
-              rel="noreferrer"
-              className="contact-social-icon"
-            >
-              github
-            </a>
+        </AOSAnimation>
+        <AOSAnimation animation="fade-left" duration={2000} delay={100}>
+          <div className="contact-social-icon-container">
+            <div className="contact-social-icon-sub-container">
+              <a
+                href="https://www.linkedin.com/in/mgcm-ph/"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-social-icon"
+              >
+                linkedin
+              </a>
+              <a
+                href="https://www.facebook.com/menchylin"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-social-icon"
+              >
+                facebook
+              </a>
+              <a
+                href="https://github.com/menchy-lin"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-social-icon"
+              >
+                github
+              </a>
+            </div>
           </div>
-        </div>
+        </AOSAnimation>
       </div>
     </section>
   );

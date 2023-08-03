@@ -8,10 +8,12 @@
 
 .about-container {
   padding: 10px 100px 60px 100px;
-  border-bottom: 1rem dashed var(--color-dark-violet);
+  border-bottom: 16px dashed var(--color-dark-gray);
+  display: flex;
+  justify-content: center;
 }
 
-.about-border {
+.about-sub-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -34,7 +36,8 @@
   position: relative;
   color: var(--color-dark-gray);
   font-weight: 400;
-  font-size: 6rem;
+  font-size: calc(4 * 1.8vmax);
+
   line-height: 1;
   text-transform: lowercase;
   border-bottom: 4px solid var(--color-dark-gray);
@@ -53,6 +56,7 @@
   display: flex;
   align-items: flex-start;
   font-family: var(--font-2p);
+  font-size: calc(4 * 1.8vmax);
 }
 
 .about-dev-container.about-dev-initial-load {
@@ -116,8 +120,8 @@
 }
 
 .about-img-profile {
-  width: 350px;
-  height: 350px;
+  max-width: 350px;
+  height: 100%;
   object-fit: contain;
   padding: 10px;
   border: 10px dashed var(--color-light-violet);
@@ -129,22 +133,10 @@
   border-bottom: 6px dashed var(--color-dark-gray);
 }
 
-/* @media only screen and (max-width: 600px) {
-  :root {
-    --size: 2;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  :root {
-    --size: 1.4;
-  }
-} */
-
 .about-name {
   background: var(--color-light-violet);
   /* transform: skew(calc(var(--skew) * -1deg), calc(var(--skew) * -1deg)); */
-  font-size: calc(1 * 1.8vmax);
+  font-size: calc(1 * 1.75vmax);
   font-family: var(--font-raleway);
   font-weight: 700;
   color: #fff;
@@ -152,8 +144,7 @@
   border: 3px solid var(--boxshadow);
   border-inline: 0;
 
-  text-shadow:
-    var(--textshadow) 0px 0px 0px,
+  text-shadow: var(--textshadow) 0px 0px 0px,
     var(--textshadow) 0.669131px 0.743145px 0px,
     var(--textshadow) 1.33826px 1.48629px 0px,
     var(--textshadow) 2.00739px 2.22943px 0px,
@@ -161,8 +152,7 @@
     var(--textshadow) 3.34565px 3.71572px 0px,
     var(--textshadow) 4.01478px 4.45887px 0px,
     var(--textshadow) 4.68391px 5.20201px 0px;
-  box-shadow:
-    var(--border) 0px 0px 0px,
+  box-shadow: var(--border) 0px 0px 0px,
     var(--boxshadow) 0.819152px 0.573576px 0px,
     var(--boxshadow) 1.6383px 1.14715px 0px,
     var(--boxshadow) 2.45746px 1.72073px 0px,
@@ -182,4 +172,28 @@
 .noisy {
   background-image: var(--noise-image);
   padding: 0 13px 5px 10px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .about-sub-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .about-tag-container {
+    padding: 1rem;
+  }
+
+  .about-img-profile {
+    max-width: 150px;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .about-sub-container {
+    border: 0.5rem solid var(--color-dark-violet);
+  }
 }

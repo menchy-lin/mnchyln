@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react";
+import arrowUpViolet from "../assets/img/arrow-up-violet.png";
+
 import "./ScrollButton.css";
 
 const ScrollButton = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 400) {
-        setShowTopBtn(true);
-      } else {
-        setShowTopBtn(false);
-      }
-    });
+    const handleScroll = () => {
+      setShowTopBtn(window.scrollY > 600);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const goToTop = () => {
@@ -19,13 +21,11 @@ const ScrollButton = () => {
   };
 
   return (
-    <div className="top-to-btm">
-      {showTopBtn && (
-        <button className="icon-position icon-style" onClick={goToTop}>
-          back to top
-        </button>
-      )}
-    </div>
+    <img
+      className={`btn-style ${showTopBtn ? "show" : ""}`}
+      onClick={goToTop}
+      src={arrowUpViolet}
+    />
   );
 };
 

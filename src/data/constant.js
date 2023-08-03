@@ -1,36 +1,31 @@
-import css from "../assets/img/css3.svg";
-import git from "../assets/img/icons8-git.svg";
-import html from "../assets/img/html5.svg";
-import github from "../assets/img/icons8-github.svg";
-import js from "../assets/img/javascript.svg";
-import tailwind from "../assets/img/icons8-tailwind-css.svg";
-import react from "../assets/img/react.svg";
-import bootstrap from "../assets/img/bootstrap.svg";
+import css from "../assets/img/css.png";
+import git from "../assets/img/git.png";
+import html from "../assets/img/html.png";
+import github from "../assets/img/github.png";
+import js from "../assets/img/js.png";
+import tailwind from "../assets/img/tailwind.png";
+import react from "../assets/img/react.png";
+import bootstrap from "../assets/img/bootstrap.png";
 
 const RESUME_ITEM = [
-  {
-    title: "CSS",
-    img: css,
-    desc: "I use css for styling",
-  },
   {
     title: "GIT",
     img: git,
     desc: "I use css for styling",
   },
   {
-    title: "HTML",
-    img: html,
-    desc: "I use css for styling",
-  },
-  {
-    title: "GITHUB",
-    img: github,
+    title: "CSS",
+    img: css,
     desc: "I use css for styling",
   },
   {
     title: "JAVASCRIPT",
     img: js,
+    desc: "I use css for styling",
+  },
+  {
+    title: "HTML",
+    img: html,
     desc: "I use css for styling",
   },
   {
@@ -41,6 +36,11 @@ const RESUME_ITEM = [
   {
     title: "REACT",
     img: react,
+    desc: "I use css for styling",
+  },
+  {
+    title: "GITHUB",
+    img: github,
     desc: "I use css for styling",
   },
   {

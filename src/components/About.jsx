@@ -18,7 +18,7 @@ const About = () => {
   return (
     <>
       <section className="about-container">
-        <div className="about-border">
+        <div className="about-sub-container">
           <div className="about-tag-container">
             <div className="about-tag">
               <span className="about-tag-1">Front</span>

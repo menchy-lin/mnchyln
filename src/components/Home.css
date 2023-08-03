@@ -6,4 +6,6 @@
   background-image: linear-gradient(#e7dcf9 2px, transparent 2px),
     linear-gradient(to right, #e7dcf9 2px, #e5fbe5 2px);
   background-size: 44px 40px;
+  font-family: "Roboto Mono", monospace;
+  margin: 1rem;
 }

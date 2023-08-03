@@ -4,14 +4,16 @@
   --color-light-gray: #f1f1f1;
   --color-dark-gray: #373636;
   --color-light-green: #e5fbe5;
-  --color-dark-green: #0e4d0b;
-  --color-green: #03ae1d;
-  --color-text-green: #19cc5e;
+  --color-green: #19cc5e;
+  --color-yellow-green: #9acd32;
+  --color-dark-green: #085604;
   --color-dark-violet: #821fec;
   --color-light-violet: #a454ff;
 
   --box-shadow-black: 6px 6px 0px 0px rgba(0, 0, 0, 0.6);
-  --box-shadow-white: 6px 6px 0px 0px rgba(237, 236, 236, 0.75);
+  --box-shadow-equal-black: 0px 6px 0px 0px rgba(0, 0, 0, 0.75);
+  --box-shadow-white: 6px 6px 0px 0px #fff;
+  --box-shadow-white-glow: 0px 0px 10px 0px rgba(255, 255, 255, 1);
 
   --font-2p: "Press Start 2P", cursive;
   --font-monoton: "Monoton", cursive;
@@ -58,10 +60,6 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: "Roboto Mono", monospace;
-  margin: 1rem;
-  display: flex;
-  justify-content: center;
 }
 
 /* A elements that don't have a class get default styles */

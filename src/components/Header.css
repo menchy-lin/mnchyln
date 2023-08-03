@@ -17,13 +17,13 @@
   cursor: pointer;
 }
 
-.navbar-menu {
+.navbar-item-column {
   display: flex;
-  list-style: none;
   gap: 2rem;
 }
 
-.navbar-item a {
+.navbar-item-1 a,
+.navbar-item-2 a {
   font-size: 1.2rem;
   text-decoration: none;
   text-transform: lowercase;
@@ -45,7 +45,7 @@
   height: 4px;
   bottom: -5px;
   left: 0;
-  background-color: var(--color-dark-green);
+  background: var(--color-green);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -53,10 +53,11 @@
 .resume:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+  box-shadow: var(--box-shadow-equal-black);
 }
 
 .resume:hover {
-  color: var(--color-dark-green);
+  color: var(--color-n);
 }
 
 .notify {
@@ -72,7 +73,15 @@
   color: var(--color-dark-violet);
 }
 
+.header-close-icon {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  .navbar {
+    padding: 25px 15px;
+  }
+
   .navbar-menu {
     display: none;
   }
@@ -83,17 +92,76 @@
 
   .navbar.active .navbar-menu {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    justify-content: space-between;
     background: var(--color-dark-gray);
+    border: 8px dashed var(--color-light-violet);
     position: fixed;
-    top: 69px;
+    top: 16px;
     left: 0;
     right: 0;
-    padding: 10px 100px;
+    padding: 20px 27px;
+    margin-inline: 1rem;
+    z-index: 999;
   }
 
-  .navbar.active .navbar-item {
-    margin-bottom: 10px;
+  .navbar-item-column-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-close-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .header-menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  body.header-menu-open {
+    overflow: hidden;
+  }
+
+  .resume {
+    color: var(--color-light-gray);
+    font-size: 0.75rem !important;
+  }
+
+  .resume:after {
+    background: var(--color-green);
+  }
+
+  .resume:hover {
+    color: var(--color-green);
+  }
+
+  .notify {
+    color: var(--color-light-green);
+    font-size: 0.75rem !important;
+    border: 4px solid var(--color-light-green);
+    background: var(--color-light-violet);
+  }
+
+  .notify:hover {
+    color: var(--color-dark-gray);
+  }
+
+  .navbar-item-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .navbar-logo {
+    width: 40px;
+    box-shadow: var(--box-shadow-black);
   }
 }
