@@ -5,7 +5,7 @@ const ViewResume = () => {
   return (
     <>
       <button>
-        <Link to="/">Go Back</Link>
+        <Link to="/mnchyln">Go Back</Link>
       </button>
     </>
   );
