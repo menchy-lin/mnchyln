@@ -1,52 +1,22 @@
 import "./Resume.css";
 import resume from "../assets/pdf/mgcm.pdf";
 import AOSAnimation from "./AOSAnimation";
+import { Link } from "react-router-dom";
 
 const Resume = () => {
   return (
-    // <section id="resume" className="resume-container">
-    //   <div className="resume-sub-container">
-    //     <AOSAnimation animation="fade-up" duration={1000} delay={100}>
-    //       <div className="resume-download">
-    //         <a
-    //           href={resume}
-    //           download="Download resume"
-    //           target="_blank"
-    //           rel="noreferrer"
-    //           className="resume-download-link"
-    //         >
-    //           <span>Download Resume...</span>
-    //         </a>
-    //       </div>
-    //     </AOSAnimation>
-    //     <AOSAnimation animation="fade-up" duration={1000} delay={100}>
-    //       <div className="resume-download">
-    //         <a
-    //           href={resume}
-    //           download="Download resume"
-    //           target="_blank"
-    //           rel="noreferrer"
-    //           className="resume-download-link"
-    //         >
-    //           <span>View Resume...</span>
-    //         </a>
-    //       </div>
-    //     </AOSAnimation>
-    //   </div>
-    // </section>
-
-    <section className="resume-container">
+    <section id="resume" className="resume-container">
       <div className="resume-sub-container">
         <AOSAnimation animation="fade-up" duration={1000} delay={100}>
           <div className="resume-center">
-            <a
-              href={resume}
-              download="Download resume"
-              target="_blank"
+            <Link
+              to="/myresume"
+              // target="_blank"
               rel="noreferrer"
               className="resume-button"
             >
               <span>View Resume</span>
+
               <span className="resume-skew">
                 <svg
                   width="66px"
@@ -80,15 +50,15 @@ const Resume = () => {
                   </g>
                 </svg>
               </span>
-            </a>
+            </Link>
           </div>
         </AOSAnimation>
         <AOSAnimation animation="fade-up" duration={1000} delay={100}>
           <div className="resume-center">
             <a
               href={resume}
-              download="Download resume"
-              target="_blank"
+              download="MGCM"
+              // target="_blank"
               rel="noreferrer"
               className="resume-button"
             >

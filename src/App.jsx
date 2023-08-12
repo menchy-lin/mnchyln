@@ -3,7 +3,9 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Skill from "./components/Skill";
 import Resume from "./components/Resume";
+import ViewResume from "./components/ViewResume";
 import Contact from "./components/Contact";
+import NotFound from "./components/NotFound";
 import ScrollButton from "./components/ScrollButton";
 import "./index.css";
 
@@ -11,11 +13,13 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/mnchyln" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skill" element={<Skill />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/myresume" element={<ViewResume />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <ScrollButton />
     </Router>
