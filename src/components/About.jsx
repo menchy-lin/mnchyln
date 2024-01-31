@@ -21,8 +21,8 @@ const About = () => {
         <div className="about-border">
           <div className="about-tag-container">
             <div className="about-tag">
-              <span className="about-tag-1">Front</span>
-              <span className="about-tag-2">end</span>{" "}
+              <span className="about-tag-1">Graphic</span> &
+              <span className="about-tag-2">Web</span>{" "}
             </div>
             <div
               className={`about-dev-container ${
@@ -32,7 +32,7 @@ const About = () => {
               <svg className="about-svg" viewBox="0 0 1160 200">
                 <symbol id="s-text">
                   <text textAnchor="middle" x="50%" y="80%" fontSize="128px">
-                    Developer
+                    Designer
                   </text>
                 </symbol>
                 <g className="g-ants">
