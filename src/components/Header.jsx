@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/img/logo.png";
-// import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./Header.css";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
@@ -24,11 +24,11 @@ const Header = () => {
           className={`navbar-toggle ${isMenuOpen ? "active" : ""}`}
           onClick={handleMenuToggle}
         >
-          {/* {isMenuOpen ? (
+          {isMenuOpen ? (
             <FaTimes style={{ color: "#dedede" }} />
           ) : (
             <FaBars style={{ color: "#dedede" }} />
-          )} */}
+          )}
         </div>
         <ul className="navbar-menu">
           <li className="navbar-item">
