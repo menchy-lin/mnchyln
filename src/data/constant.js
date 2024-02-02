@@ -10,8 +10,10 @@ import wordpress from "../assets/img/icons8-wordpress.svg";
 import photoshop from "../assets/img/icons8-photoshop.svg";
 import canva from "../assets/img/icons8-canva.svg";
 import premierePro from "../assets/img/icons8-adobe-premiere-pro.svg";
+import figma from "../assets/img/icons8-figma.svg";
+import clickup from "../assets/img/clickup-symbol-seeklogo.svg";
 
-const RESUME_ITEM = [
+const SKILL_ITEM = [
   {
     title: "CSS",
     img: css,
@@ -72,6 +74,16 @@ const RESUME_ITEM = [
     img: premierePro,
     desc: "I use css for styling",
   },
+  {
+    title: "FIGMA",
+    img: figma,
+    desc: "I use css for styling",
+  },
+  {
+    title: "CLICKUP",
+    img: clickup,
+    desc: "I use css for styling",
+  },
 ];
 
-export default RESUME_ITEM;
+export default SKILL_ITEM;

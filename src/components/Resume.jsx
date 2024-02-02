@@ -1,5 +1,5 @@
 import "./Resume.css";
-import ResumeItem from "./ResumeItem";
+import SkillItems from "./Skill";
 import resume from "../assets/pdf/mgcm.pdf";
 
 const Resume = () => {
@@ -7,7 +7,7 @@ const Resume = () => {
     <section id="resume" className="resume-container">
       <div className="resume-list-container">
         <div className="resume-list">
-          <ResumeItem />
+          <SkillItems />
         </div>
       </div>
       <div className="resume-download-container">
