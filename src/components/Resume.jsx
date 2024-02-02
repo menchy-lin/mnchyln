@@ -25,12 +25,12 @@ const Resume = () => {
         <div className="resume-download">
           <a
             href={resume}
-            download="Download resume"
+            download="MGCM"
             target="_blank"
             rel="noreferrer"
             className="resume-download-link"
           >
-            <span>View Resume...</span>
+            <span>download Resume...</span>
           </a>
         </div>
       </div>

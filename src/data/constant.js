@@ -6,6 +6,10 @@ import js from "../assets/img/javascript.svg";
 import tailwind from "../assets/img/icons8-tailwind-css.svg";
 import react from "../assets/img/react.svg";
 import bootstrap from "../assets/img/bootstrap.svg";
+import wordpress from "../assets/img/icons8-wordpress.svg";
+import photoshop from "../assets/img/icons8-photoshop.svg";
+import canva from "../assets/img/icons8-canva.svg";
+import premierePro from "../assets/img/icons8-adobe-premiere-pro.svg";
 
 const RESUME_ITEM = [
   {
@@ -46,6 +50,26 @@ const RESUME_ITEM = [
   {
     title: "BOOTSTRAP",
     img: bootstrap,
+    desc: "I use css for styling",
+  },
+  {
+    title: "WORDPRESS",
+    img: wordpress,
+    desc: "I use WordPress with ACF (Advanced Custom Fields) and theme builder like Elementor",
+  },
+  {
+    title: "ADOBE PHOTOSHOP",
+    img: photoshop,
+    desc: "I use css for styling",
+  },
+  {
+    title: "CANVA",
+    img: canva,
+    desc: "I use css for styling",
+  },
+  {
+    title: "ADOBE PREMIERE PRO",
+    img: premierePro,
     desc: "I use css for styling",
   },
 ];

@@ -21,7 +21,7 @@ const About = () => {
         <div className="about-border">
           <div className="about-tag-container">
             <div className="about-tag">
-              <span className="about-tag-1">Graphic</span> &
+              <span className="about-tag-1">Graphic/</span>
               <span className="about-tag-2">Web</span>{" "}
             </div>
             <div
